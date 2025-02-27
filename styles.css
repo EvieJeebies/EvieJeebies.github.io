@@ -1,0 +1,122 @@
+:root {
+    --primary-color: #f06292;
+    --secondary-color: #f8bbd0;
+    --background-color: #fff5f7;
+    --text-color: #880e4f;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.calendar-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+    background: #ec407a;
+    transform: translateY(-2px);
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    background: white;
+    padding: 2px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.day:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.day.marked {
+    background: var(--secondary-color);
+    border-radius: 50%;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.day.predicted {
+    background: #fce4ec;
+    border-radius: 4px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.stat-box {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.stat-box h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color);
+}
+
+#currentMonth {
+    margin: 0;
+    min-width: 150px;
+    text-align: center;
+}
+
+.actions {
+    text-align: center;
+    margin-top: 2rem;
+}
+.day.selected-start {
+    background: #ffcc80; /* Light orange background */
+    border-radius: 50%;
+    font-weight: bold;
+}

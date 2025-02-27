@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycle Tracker & Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Menstrual Cycle Tracker</h1>
+        
+        <div class="calendar-controls">
+            <button id="prevMonth">←</button>
+            <h2 id="currentMonth"></h2>
+            <button id="nextMonth">→</button>
+        </div>
+
+        <div class="calendar-grid" id="calendar"></div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <h3>Last Period</h3>
+                <p id="lastPeriod">-</p>
+            </div>
+            <div class="stat-box">
+                <h3>Average Cycle</h3>
+                <p id="averageCycle">-</p>
+            </div>
+            <div class="stat-box">
+                <h3>Next Predicted</h3>
+                <p id="nextPredicted">-</p>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button id="clearData">Clear All Data</button>
+            <button id="exportData">Export to Excel</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
