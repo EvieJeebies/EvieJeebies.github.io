@@ -198,6 +198,19 @@ document.getElementById('clearData').addEventListener('click', () => {
     updatePredictions(); // Update predictions
 });
 
+// Month switching functionality
+document.getElementById('prevMonth').addEventListener('click', () => {
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    generateCalendar(currentDate);
+    updatePredictions();
+});
+
+document.getElementById('nextMonth').addEventListener('click', () => {
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    generateCalendar(currentDate);
+    updatePredictions();
+});
+
 // Initialization
 document.addEventListener('DOMContentLoaded', () => {
     generateCalendar(currentDate);
