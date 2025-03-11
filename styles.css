@@ -1,4 +1,3 @@
-/* General styles */
 body {
   margin: 0;
   padding: 20px;
@@ -18,7 +17,6 @@ header {
   border-radius: 100px;
 }
 
-/* Gallery Grid */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -97,7 +95,6 @@ header {
   background-image: inherit;
 }
 
-/* Lightbox */
 .lightbox {
   position: fixed;
   top: 0;
