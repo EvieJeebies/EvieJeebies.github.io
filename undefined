@@ -1,7 +1,0 @@
-  if (date.getTime() === nextDay.getTime()) {
-    currentPeriod.push(date);
-  } else {
-    currentPeriod = [date];
-    starts.push(date);
-  }
-}
