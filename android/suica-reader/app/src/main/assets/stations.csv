@@ -1,0 +1,12 @@
+# Optional station-name table for Suica Reader.
+#
+# Columns: region,line,station,operator,lineName,stationName
+# Numbers may be decimal or 0x-prefixed hex. Lines starting with # are ignored.
+#
+# This file ships empty on purpose: the station code tables are maintained by
+# the transit operators and by community projects, not by this app, so no names
+# are invented here. Drop a table in the shape below and the history screen
+# will show names instead of raw codes.
+#
+# Example rows (placeholders - replace with a real table):
+# 0x00,0x01,0x01,Example Rail,Example Line,Example Station
